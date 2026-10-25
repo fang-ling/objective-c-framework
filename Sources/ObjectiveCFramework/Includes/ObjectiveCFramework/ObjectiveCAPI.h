@@ -23,6 +23,8 @@
 
 C_ASSUME_NONNULL_BEGIN
 
+#define _OBJECTIVE_C_ROOT_CLASS __attribute__((objc_root_class))
+
 /**
  * A pointer to an instance of a class.
  *
