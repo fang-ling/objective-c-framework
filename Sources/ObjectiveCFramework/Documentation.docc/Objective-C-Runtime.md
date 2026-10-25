@@ -41,6 +41,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 - ``ObjectiveCFramework/ivar_getTypeEncoding``
 - ``ObjectiveCFramework/ivar_getOffset``
 
+### Sending Messages
+
+- ``ObjectiveCFramework/objc_msg_lookup``
+
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
