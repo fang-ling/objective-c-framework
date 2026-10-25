@@ -35,6 +35,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 - ``ObjectiveCFramework/object_dispose``
 
+### Working with Instance Variables
+
+- ``ObjectiveCFramework/ivar_getName``
+
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
