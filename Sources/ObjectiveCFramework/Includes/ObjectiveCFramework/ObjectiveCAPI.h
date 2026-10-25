@@ -74,6 +74,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCInstanceVariableGetName         ivar_getName
 #define _ObjectiveCInstanceVariableGetTypeEncoding ivar_getTypeEncoding
 #define _ObjectiveCInstanceVariableGetOffset       ivar_getOffset
+#define _ObjectiveCMessageLookup                   objc_msg_lookup
 
 /**
  * Returns the name of a class.
@@ -185,6 +186,17 @@ extern CString ivar_getTypeEncoding(ObjectiveCInstanceVariable variable);
  * - Returns: The offset of the instance variable.
  */
 extern CInteger ivar_getOffset(ObjectiveCInstanceVariable variable);
+
+/**
+ * Returns a pointer to the function that implements the method for the given object and selector.
+ *
+ * - Parameters:
+ *   - object: The receiver.
+ *   - selector: The selector of the method to be called.
+ *
+ * - Returns: A pointer to the function that implements the method for the given object and selector.
+ */
+extern ObjectiveCMethodImplementation objc_msg_lookup(ObjectiveCAnyObject nillable object, ObjectiveCMethodSelector selector);
 
 #define nil (id)0
 #define Nil (Class)0
