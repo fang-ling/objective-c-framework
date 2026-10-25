@@ -64,6 +64,17 @@ typedef ObjectiveCAnyObject nillable (*ObjectiveCMethodImplementation)(Objective
  */
 typedef SEL ObjectiveCMethodSelector;
 
+#define _ObjectiveCClassGetName                    class_getName
+
+/**
+ * Returns the name of a class.
+ *
+ * - Parameter class: A class object.
+ *
+ * - Returns: The name of the class, or the empty string if `class` is ``Nil-macro``.
+ */
+extern CString nillable class_getName(Class nillable class);
+
 #define nil (id)0
 #define Nil (Class)0
 
