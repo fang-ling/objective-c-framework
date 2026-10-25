@@ -24,6 +24,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 - ``ObjectiveCFramework/class_getName``
 - ``ObjectiveCFramework/class_getSuperclass``
 - ``ObjectiveCFramework/class_getInstanceSize``
+- ``ObjectiveCFramework/class_copyIvarList``
 
 ### Class-Definition Data Structures
 
