@@ -77,6 +77,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCMessageLookup                   objc_msg_lookup
 #define _ObjectiveCMethodGetName                   method_getName
 #define _ObjectiveCSelectorGetName                 sel_getName
+#define _ObjectiveCSelectorIsEqual                 sel_isEqual
 
 /**
  * Returns the name of a class.
@@ -219,6 +220,19 @@ extern ObjectiveCMethodSelector method_getName(ObjectiveCMethod method);
  * - Returns: A C string indicating the name of the selector.
  */
 extern CString sel_getName(ObjectiveCMethodSelector selector);
+
+/**
+ * Returns a Boolean value that indicates whether two selectors are equal.
+ *
+ * ``sel_isEqual`` is equivalent to `==`.
+ *
+ * - Parameters:
+ *   - lhs: The selector to compare with `rhs`.
+ *   - rhs: The selector to compare with `lhs`.
+ *
+ * - Returns: ``CFramework/yes-macro`` if `lhs` and `rhs` are equal, otherwise ``CFramework/no-macro``.
+ */
+extern CBoolean sel_isEqual(ObjectiveCMethodSelector lhs, ObjectiveCMethodSelector rhs);
 
 #define nil (id)0
 #define Nil (Class)0
