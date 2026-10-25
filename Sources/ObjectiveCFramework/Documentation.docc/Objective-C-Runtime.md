@@ -22,6 +22,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
+- ``ObjectiveCFramework/ObjectiveCInstanceVariable``
 
 ### Instance Data Types
 
