@@ -14,6 +14,10 @@ You typically don't need to use this module directly.
 
 ## Topics
 
+### Classes
+
+- ``ObjectiveCFramework/ObjectiveCObject-class``
+
 ### Protocols
 
 - ``ObjectiveCFramework/ObjectiveCObject-protocol``
