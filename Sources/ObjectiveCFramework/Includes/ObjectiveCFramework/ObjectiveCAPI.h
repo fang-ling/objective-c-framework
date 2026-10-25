@@ -42,6 +42,15 @@ typedef const struct objc_method* ObjectiveCMethod;
  */
 typedef const struct objc_ivar* ObjectiveCInstanceVariable;
 
+/**
+ * A pointer to the start of a method implementation.
+ *
+ * This data type is a pointer to the start of the function that implements the method. This function uses standard C calling conventions as implemented for the current CPU architecture. The first
+ * argument is a pointer to `self` (that is, the memory for the particular instance of this class, or, for a class method, a pointer to the metaclass). The second argument is the method selector. The
+ * method arguments follow.
+ */
+typedef ObjectiveCAnyObject nillable (*ObjectiveCMethodImplementation)(ObjectiveCAnyObject object, SEL selector, ...);
+
 #define nil (id)0
 #define Nil (Class)0
 
