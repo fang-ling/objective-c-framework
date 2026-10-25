@@ -37,6 +37,11 @@ typedef id ObjectiveCAnyObject;
  */
 typedef const struct objc_method* ObjectiveCMethod;
 
+/**
+ * An opaque type that represents an instance variable.
+ */
+typedef const struct objc_ivar* ObjectiveCInstanceVariable;
+
 #define nil (id)0
 #define Nil (Class)0
 
