@@ -79,15 +79,23 @@
 # define __unsafe_unretained
 #endif
 
+#if !defined(Nil)
+
 /**
  * @brief A value representing no class.
  */
 #define Nil (Class _Null_unspecified)0
 
+#endif
+
+#if !defined(nil)
+
 /**
  * @brief A value representing no object.
  */
 #define nil (id _Null_unspecified)0
+
+#endif
 
 /**
  * @brief An Objective-C boolean representing true.

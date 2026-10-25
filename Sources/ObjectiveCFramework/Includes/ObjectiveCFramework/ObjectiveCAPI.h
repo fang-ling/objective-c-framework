@@ -108,7 +108,7 @@ extern Class nillable class_getSuperclass(Class nillable class);
  *
  * - Returns: The size in bytes of instances of the `class`, or `0` if `class` is ``Nil-macro``.
  */
-extern CUnsignedInteger class_getInstanceSize(Class class);
+extern CUnsignedInteger class_getInstanceSize(Class nillable class);
 
 /**
  * Describes the instance variables declared by a class.
@@ -236,8 +236,17 @@ extern CString sel_getName(ObjectiveCMethodSelector selector);
  */
 extern CBoolean sel_isEqual(ObjectiveCMethodSelector lhs, ObjectiveCMethodSelector rhs);
 
+#if !defined(nil)
+
 #define nil (id)0
+
+#endif
+
+#if !defined(Nil)
+
 #define Nil (Class)0
+
+#endif
 
 C_ASSUME_NONNULL_END
 
