@@ -45,6 +45,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 - ``ObjectiveCFramework/objc_msg_lookup``
 
+### Working with Methods
+
+- ``ObjectiveCFramework/method_getName``
+
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
