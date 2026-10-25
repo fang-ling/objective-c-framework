@@ -39,6 +39,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 - ``ObjectiveCFramework/ivar_getName``
 - ``ObjectiveCFramework/ivar_getTypeEncoding``
+- ``ObjectiveCFramework/ivar_getOffset``
 
 ### Class-Definition Data Structures
 
