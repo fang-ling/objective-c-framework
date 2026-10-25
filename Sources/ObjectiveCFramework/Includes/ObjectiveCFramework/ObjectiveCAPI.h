@@ -71,6 +71,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCClassCopyMethodList             class_copyMethodList
 #define _ObjectiveCClassCreateInstance             class_createInstance
 #define _ObjectiveCObjectDispose                   object_dispose
+#define _ObjectiveCInstanceVariableGetName         ivar_getName
 
 /**
  * Returns the name of a class.
@@ -152,6 +153,15 @@ extern ObjectiveCAnyObject nillable class_createInstance(Class nillable class, C
  * - Returns: ``nil-macro``.
  */
 extern ObjectiveCAnyObject nillable object_dispose(ObjectiveCAnyObject nillable object);
+
+/**
+ * Returns the name of an instance variable.
+ *
+ * - Parameter variable: The ``ObjectiveCInstanceVariable`` describing the instance variable whose value you want to read.
+ *
+ * - Returns: A C string containing the instance variable's name.
+ */
+extern CString ivar_getName(ObjectiveCInstanceVariable variable);
 
 #define nil (id)0
 #define Nil (Class)0
