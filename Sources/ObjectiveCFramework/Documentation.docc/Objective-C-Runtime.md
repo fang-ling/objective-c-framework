@@ -19,6 +19,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 ## Topics
 
+### Class-Definition Data Structures
+
+- ``ObjectiveCFramework/ObjectiveCMethod``
+
 ### Instance Data Types
 
 - ``ObjectiveCFramework/ObjectiveCAnyObject``
