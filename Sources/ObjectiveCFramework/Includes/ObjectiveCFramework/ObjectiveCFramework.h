@@ -20,5 +20,6 @@
 #define OBJECTIVE_C_FRAMEWORK_H
 
 #import <ObjectiveCFramework/ObjectiveCAPI.h>
+#import <ObjectiveCFramework/ObjectiveCObject.h>
 
 #endif
