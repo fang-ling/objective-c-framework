@@ -22,6 +22,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 ### Working with Classes
 
 - ``ObjectiveCFramework/class_getName``
+- ``ObjectiveCFramework/class_getSuperclass``
 
 ### Class-Definition Data Structures
 
