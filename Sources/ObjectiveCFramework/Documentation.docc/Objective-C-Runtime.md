@@ -23,6 +23,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
 - ``ObjectiveCFramework/ObjectiveCInstanceVariable``
+- ``ObjectiveCFramework/ObjectiveCMethodImplementation``
 
 ### Instance Data Types
 
