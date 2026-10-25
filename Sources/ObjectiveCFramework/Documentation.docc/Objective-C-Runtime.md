@@ -31,6 +31,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 
 - ``ObjectiveCFramework/class_createInstance``
 
+### Working with Instances
+
+- ``ObjectiveCFramework/object_dispose``
+
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
