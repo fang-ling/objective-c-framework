@@ -21,14 +21,15 @@
 SYMBOLS_FOLDER="/dev/shm/symbol-graphs"
 OUTPUT_FOLDER="/dev/shm/docc"
 
-clang                                                                        \
-    -extract-api                                                             \
-    --product-name=ObjectiveCFramework                                       \
-    -o $SYMBOLS_FOLDER/ObjectiveCFramework.symbols.json                      \
-    -x objective-c-header                                                    \
-    Sources/ObjectiveCFramework/Includes/ObjectiveCFramework/ObjectiveCAPI.h \
-    -ISources/ObjectiveCFramework/Includes                                   \
-    -I../c-framework/Sources/CFramework/Includes                             \
+clang                                                                           \
+    -extract-api                                                                \
+    --product-name=ObjectiveCFramework                                          \
+    -o $SYMBOLS_FOLDER/ObjectiveCFramework.symbols.json                         \
+    -x objective-c-header                                                       \
+    Sources/ObjectiveCFramework/Includes/ObjectiveCFramework/ObjectiveCAPI.h    \
+    Sources/ObjectiveCFramework/Includes/ObjectiveCFramework/ObjectiveCObject.h \
+    -ISources/ObjectiveCFramework/Includes                                      \
+    -I../c-framework/Sources/CFramework/Includes                                \
     -I.
 
 docc convert Sources/ObjectiveCFramework/Documentation.docc -o $OUTPUT_FOLDER --additional-symbol-graph-dir $SYMBOLS_FOLDER
