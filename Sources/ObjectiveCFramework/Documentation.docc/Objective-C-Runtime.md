@@ -27,6 +27,10 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 - ``ObjectiveCFramework/class_copyIvarList``
 - ``ObjectiveCFramework/class_copyMethodList``
 
+### Instantiating Classes
+
+- ``ObjectiveCFramework/class_createInstance``
+
 ### Class-Definition Data Structures
 
 - ``ObjectiveCFramework/ObjectiveCMethod``
