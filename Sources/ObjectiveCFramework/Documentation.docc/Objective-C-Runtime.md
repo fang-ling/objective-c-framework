@@ -52,6 +52,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 ### Working with Selectors
 
 - ``ObjectiveCFramework/sel_getName``
+- ``ObjectiveCFramework/sel_isEqual``
 
 ### Class-Definition Data Structures
 
