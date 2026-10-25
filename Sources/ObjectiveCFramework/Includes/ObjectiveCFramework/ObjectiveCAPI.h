@@ -70,6 +70,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCClassCopyInstanceVariableList   class_copyIvarList
 #define _ObjectiveCClassCopyMethodList             class_copyMethodList
 #define _ObjectiveCClassCreateInstance             class_createInstance
+#define _ObjectiveCObjectDispose                   object_dispose
 
 /**
  * Returns the name of a class.
@@ -142,6 +143,15 @@ extern ObjectiveCMethod nillable* nillable class_copyMethodList(Class nillable c
  * - Returns: An instance of the `class`.
  */
 extern ObjectiveCAnyObject nillable class_createInstance(Class nillable class, CUnsignedInteger extraBytes);
+
+/**
+ * Frees the memory occupied by a given object.
+ *
+ * - Parameter object: An Objective-C object.
+ *
+ * - Returns: ``nil-macro``.
+ */
+extern ObjectiveCAnyObject nillable object_dispose(ObjectiveCAnyObject nillable object);
 
 #define nil (id)0
 #define Nil (Class)0
