@@ -3,29 +3,29 @@
 //===----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------===//
 //
 //  Package.swift
-//  swift-framework
+//  objective-c-framework
 //
 //  Created by Fang Ling on 2026/9/25.
 //
-//  This source file is part of the SwiftFramework open source project
+//  This source file is part of the ObjectiveCFramework open source project
 //
 //  Copyright (c) 2026 Fang Ling <fangling@fangl.ing>
-//  Licensed under Apache License v2.0
+//  Licensed under GNU Lesser General Public License v3.0
 //
 //  See LICENSE for license information
 //
-//  SPDX-License-Identifier: Apache-2.0
+//  SPDX-License-Identifier: LGPL-3.0-only
 //
 //===----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------===//
 
 import PackageDescription
 
 let package = Package(
-  name: "swift-framework",
+  name: "objective-c-framework",
   products: [
-    .library(name: "SwiftFramework", targets: ["SwiftFramework"])
+    .library(name: "ObjectiveCFramework", targets: ["ObjectiveCFramework"])
   ],
   targets: [
-    .target(name: "SwiftFramework")
+    .target(name: "ObjectiveCFramework")
   ]
 )
