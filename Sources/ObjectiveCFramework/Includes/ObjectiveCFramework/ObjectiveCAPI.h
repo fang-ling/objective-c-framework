@@ -23,6 +23,15 @@
 
 C_ASSUME_NONNULL_BEGIN
 
+/**
+ * A pointer to an instance of a class.
+ *
+ * When you create an instance of a particular class, the allocated memory contains an `objc_object` data structure, which is directly followed by the data for the instance variables of the class.
+ *
+ * The ``ObjectiveCObject-class/alloc`` methodsof the class ``ObjectiveCObject-class`` use the function ``class_createInstance`` to create `objc_object` data structures.
+ */
+typedef id ObjectiveCAnyObject;
+
 #define nil (id)0
 #define Nil (Class)0
 
