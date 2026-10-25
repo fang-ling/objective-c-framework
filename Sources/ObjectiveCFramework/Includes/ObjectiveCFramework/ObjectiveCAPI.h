@@ -69,6 +69,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCClassGetInstanceSize            class_getInstanceSize
 #define _ObjectiveCClassCopyInstanceVariableList   class_copyIvarList
 #define _ObjectiveCClassCopyMethodList             class_copyMethodList
+#define _ObjectiveCClassCreateInstance             class_createInstance
 
 /**
  * Returns the name of a class.
@@ -130,6 +131,17 @@ extern ObjectiveCInstanceVariable nillable* nillable class_copyIvarList(Class ni
  *   If `class` implements no instance methods, or `class` is ``Nil-macro``, returns ``CFramework/null-macro`` and `*outCount` is `0`.
  */
 extern ObjectiveCMethod nillable* nillable class_copyMethodList(Class nillable class, CUnsignedInteger32* nillable outCount);
+
+/**
+ * Creates an instance of a class, allocating memory for the class in the default `malloc` memory zone.
+ *
+ * - Parameters:
+ *   - class: The class that you want to allocate an instance of.
+ *   - extraBytes: An integer indicating the number of extra bytes to allocate. The additional bytes can be used to store additional instance variables beyond those defined in the class definition.
+ *
+ * - Returns: An instance of the `class`.
+ */
+extern ObjectiveCAnyObject nillable class_createInstance(Class nillable class, CUnsignedInteger extraBytes);
 
 #define nil (id)0
 #define Nil (Class)0
