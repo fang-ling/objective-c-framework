@@ -68,6 +68,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCClassGetSuperclass              class_getSuperclass
 #define _ObjectiveCClassGetInstanceSize            class_getInstanceSize
 #define _ObjectiveCClassCopyInstanceVariableList   class_copyIvarList
+#define _ObjectiveCClassCopyMethodList             class_copyMethodList
 
 /**
  * Returns the name of a class.
@@ -111,6 +112,24 @@ extern CUnsignedInteger class_getInstanceSize(Class class);
  *   If the class declares no instance variables, or `class` is ``Nil-macro``, ``CFramework/null-macro`` is returned and `*outCount` is 0.
  */
 extern ObjectiveCInstanceVariable nillable* nillable class_copyIvarList(Class nillable class, CUnsignedInteger32* nillable outCount);
+
+/**
+ * Describes the instance methods implemented by a class.
+ *
+ * Use this method to get the class methods of a class.
+ *
+ * To get the implementations of methods that may be implemented by superclasses, use ``class_getInstanceMethod`` or ``class_getClassMethod``.
+ *
+ * - Parameters:
+ *   - class: The class you want to inspect.
+ *   - outCount: On return, contains the length of the returned array. If `outCount` is ``CFramework/null-macro``, the length is not returned.
+ *
+ * - Returns: An array of pointers of type ``ObjectiveCMethod`` describing the instance methods implemented by the class—any instance methods implemented by superclasses are not included. The array
+ *   contains `*outCount` pointers followed by a ``CFramework/null-macro`` terminator. You must free the array with `free()`.
+ *
+ *   If `class` implements no instance methods, or `class` is ``Nil-macro``, returns ``CFramework/null-macro`` and `*outCount` is `0`.
+ */
+extern ObjectiveCMethod nillable* nillable class_copyMethodList(Class nillable class, CUnsignedInteger32* nillable outCount);
 
 #define nil (id)0
 #define Nil (Class)0
