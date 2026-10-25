@@ -38,6 +38,7 @@ Because this isn't a document about C, it assumes some prior acquaintance with t
 ### Working with Instance Variables
 
 - ``ObjectiveCFramework/ivar_getName``
+- ``ObjectiveCFramework/ivar_getTypeEncoding``
 
 ### Class-Definition Data Structures
 
