@@ -76,6 +76,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCInstanceVariableGetOffset       ivar_getOffset
 #define _ObjectiveCMessageLookup                   objc_msg_lookup
 #define _ObjectiveCMethodGetName                   method_getName
+#define _ObjectiveCSelectorGetName                 sel_getName
 
 /**
  * Returns the name of a class.
@@ -209,6 +210,15 @@ extern ObjectiveCMethodImplementation objc_msg_lookup(ObjectiveCAnyObject nillab
  * - Returns: A pointer of type ``ObjectiveCMethodSelector``.
  */
 extern ObjectiveCMethodSelector method_getName(ObjectiveCMethod method);
+
+/**
+ * Returns the name of the method specified by a given selector.
+ *
+ * - Parameter selector: A pointer of type ``ObjectiveCMethodSelector``. Pass the selector whose name you wish to determine.
+ *
+ * - Returns: A C string indicating the name of the selector.
+ */
+extern CString sel_getName(ObjectiveCMethodSelector selector);
 
 #define nil (id)0
 #define Nil (Class)0
