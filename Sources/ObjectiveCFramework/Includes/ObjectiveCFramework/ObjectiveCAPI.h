@@ -67,6 +67,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCClassGetName                    class_getName
 #define _ObjectiveCClassGetSuperclass              class_getSuperclass
 #define _ObjectiveCClassGetInstanceSize            class_getInstanceSize
+#define _ObjectiveCClassCopyInstanceVariableList   class_copyIvarList
 
 /**
  * Returns the name of a class.
@@ -96,6 +97,20 @@ extern Class nillable class_getSuperclass(Class nillable class);
  * - Returns: The size in bytes of instances of the `class`, or `0` if `class` is ``Nil-macro``.
  */
 extern CUnsignedInteger class_getInstanceSize(Class class);
+
+/**
+ * Describes the instance variables declared by a class.
+ *
+ * - Parameters:
+ *   - class: The class to inspect.
+ *   - outCount: On return, contains the length of the returned array. If `outCount` is ``CFramework/null-macro``, the length is not returned.
+ *
+ * - Returns: An array of pointers of type ``ObjectiveCInstanceVariable`` describing the instance variables declared by the class. Any instance variables declared by superclasses are not included. The
+ *   array contains `*outCount` pointers followed by a ``CFramework/null-macro`` terminator. You must free the array with `free()`.
+ *
+ *   If the class declares no instance variables, or `class` is ``Nil-macro``, ``CFramework/null-macro`` is returned and `*outCount` is 0.
+ */
+extern ObjectiveCInstanceVariable nillable* nillable class_copyIvarList(Class nillable class, CUnsignedInteger32* nillable outCount);
 
 #define nil (id)0
 #define Nil (Class)0
