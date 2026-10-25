@@ -73,6 +73,7 @@ typedef SEL ObjectiveCMethodSelector;
 #define _ObjectiveCObjectDispose                   object_dispose
 #define _ObjectiveCInstanceVariableGetName         ivar_getName
 #define _ObjectiveCInstanceVariableGetTypeEncoding ivar_getTypeEncoding
+#define _ObjectiveCInstanceVariableGetOffset       ivar_getOffset
 
 /**
  * Returns the name of a class.
@@ -172,6 +173,18 @@ extern CString ivar_getName(ObjectiveCInstanceVariable variable);
  * - Returns: A C string containing the instance variable's type encoding.
  */
 extern CString ivar_getTypeEncoding(ObjectiveCInstanceVariable variable);
+
+/**
+ * Returns the offset of an instance variable.
+ *
+ * For instance variables of type ``ObjectiveCAnyObject`` or other object types, call ``object_getIvar`` and ``object_setIvar`` instead of using this offset to access the instance variable data
+ * directly.
+ *
+ * - Parameter variable: The ``ObjectiveCInstanceVariable`` describing the instance variable whose value you want to read.
+ *
+ * - Returns: The offset of the instance variable.
+ */
+extern CInteger ivar_getOffset(ObjectiveCInstanceVariable variable);
 
 #define nil (id)0
 #define Nil (Class)0
