@@ -66,6 +66,7 @@ typedef SEL ObjectiveCMethodSelector;
 
 #define _ObjectiveCClassGetName                    class_getName
 #define _ObjectiveCClassGetSuperclass              class_getSuperclass
+#define _ObjectiveCClassGetInstanceSize            class_getInstanceSize
 
 /**
  * Returns the name of a class.
@@ -86,6 +87,15 @@ extern CString nillable class_getName(Class nillable class);
  * - Returns: The superclass of the class, or ``Nil-macro`` if `class` is a root class, or ``Nil-macro`` if `class` is ``Nil-macro``.
  */
 extern Class nillable class_getSuperclass(Class nillable class);
+
+/**
+ * Returns the size of instances of a class.
+ *
+ * - Parameter class: A class object.
+ *
+ * - Returns: The size in bytes of instances of the `class`, or `0` if `class` is ``Nil-macro``.
+ */
+extern CUnsignedInteger class_getInstanceSize(Class class);
 
 #define nil (id)0
 #define Nil (Class)0
