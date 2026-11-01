@@ -19,11 +19,11 @@
 #ifndef OBJECTIVE_C_OBJECT_H
 #define OBJECTIVE_C_OBJECT_H
 
-#import <ObjectiveCFramework/ObjectiveCAPI.h>
-
 #import <CFramework/CFramework.h>
 
 #if !C_TARGET_OS_APPLE
+
+#import <ObjectiveCFramework/ObjectiveCAPI.h>
 
 C_ASSUME_NONNULL_BEGIN
 
@@ -221,6 +221,12 @@ _OBJECTIVE_C_ROOT_CLASS
 @end
 
 C_ASSUME_NONNULL_END
+
+#else
+
+#import <objc/NSObject.h>
+
+#define ObjectiveCObject NSObject
 
 #endif
 
