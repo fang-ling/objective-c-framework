@@ -25,7 +25,16 @@ let package = Package(
   products: [
     .library(name: "ObjectiveCFramework", targets: ["ObjectiveCFramework"])
   ],
+  dependencies: [
+    .package(path: "../c-framework")
+  ],
   targets: [
-    .target(name: "ObjectiveCFramework")
+    .target(
+      name: "ObjectiveCFramework",
+      dependencies: [
+        .product(name: "CFramework", package: "c-framework")
+      ],
+      publicHeadersPath: "Includes"
+    )
   ]
 )
